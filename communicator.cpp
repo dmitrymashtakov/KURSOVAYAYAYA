@@ -88,7 +88,7 @@ int communicator::connection(int port,std::map<std::string,std::string> base,log
                 if(work_sock <= 0) {
                     throw no_crit_err("Ошибка сокета");
                 }
-                l->writelog("Client socket created");
+                l->writelog("Сокет создан");
                 rc = recv(work_sock,buff.get(),buff_size,0);
                 if(rc <= 0) {
                     close(work_sock);

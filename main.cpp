@@ -6,9 +6,16 @@
 #include "error.h"
 #include "log.h"
 
-int main(int argc,const char** argv)
-{
+int main(int argc, const char** argv) {
     interface z;
-    z.comm_proc(argc,argv);
-    return 0;
+    if (!z.parser(argc, argv)) {
+        return 1;
+    }
+
+    std::string basefile = "base.txt";
+    std::string logfile = "log.txt";
+
+    z.setup_connection(basefile, logfile);
+        
+    return 0; 
 }

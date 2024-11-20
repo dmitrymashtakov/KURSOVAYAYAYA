@@ -1,16 +1,24 @@
 #pragma once
 #include <string>
-class logger
-{
-    std::string gettime();
-    std::string path_to_logfile;
+
+class logger {
+private:
+    std::string gettime(); // Получение текущего времени
+    std::string path_to_logfile; // Путь к файлу лога
+
 public:
-    int writelog(std::string s);
-    int set_path(std::string path_file);
-    logger(){
-    path_to_logfile = " ";
-    };
-    logger(std::string s){
-    path_to_logfile = s;
-    };
+    // Конструктор по умолчанию
+    logger();
+
+    // Конструктор с параметром
+    logger(const std::string& path);
+
+    // Установка пути к файлу лога
+    int set_path(const std::string& path_file);
+
+    // Запись сообщения в лог
+    int writelog(const std::string& message);
+
+    // Получение пути к файлу лога (для тестирования)
+    std::string get_path() const;
 };
