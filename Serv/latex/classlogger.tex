@@ -1,0 +1,104 @@
+\hypertarget{classlogger}{}\doxysection{Класс logger}
+\label{classlogger}\index{logger@{logger}}
+
+
+Класс для журнала лога  
+
+
+
+
+{\ttfamily \#include $<$log.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlogger_a4f753a510e00c892b38e95c2284363a6}\label{classlogger_a4f753a510e00c892b38e95c2284363a6}} 
+{\bfseries logger} ()
+\begin{DoxyCompactList}\small\item\em конструктор по умолчанию \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlogger_a3ba55d67c48e54c1b189856bcf3451a3}\label{classlogger_a3ba55d67c48e54c1b189856bcf3451a3}} 
+{\bfseries logger} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em конструктор с параметром \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classlogger_a44af18ffbd2a795d29f7c3996cf36201}{set\+\_\+path}} (const std\+::string \&path\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Установка пути к файлу лога \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classlogger_adb4d3318a3dc17ef2cf4d2fca21e566c}{writelog}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Запись события в журнал \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlogger_afa92e606d629dde8b5b71aa0c9afedf5}\label{classlogger_afa92e606d629dde8b5b71aa0c9afedf5}} 
+std\+::string {\bfseries get\+\_\+path} () const
+\begin{DoxyCompactList}\small\item\em Получение пути к файлу лога (для модульного тестирования) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classlogger_af04d09b3015e2aa00ef7771233a33bf0}{gettime}} ()
+\begin{DoxyCompactList}\small\item\em Получение текущего времени \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlogger_ad81104a3584301fa1800d1e562bb6b58}\label{classlogger_ad81104a3584301fa1800d1e562bb6b58}} 
+std\+::string {\bfseries path\+\_\+to\+\_\+logfile}
+\begin{DoxyCompactList}\small\item\em Путьк файлу лога \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для журнала лога 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classlogger_af04d09b3015e2aa00ef7771233a33bf0}\label{classlogger_af04d09b3015e2aa00ef7771233a33bf0}} 
+\index{logger@{logger}!gettime@{gettime}}
+\index{gettime@{gettime}!logger@{logger}}
+\doxysubsubsection{\texorpdfstring{gettime()}{gettime()}}
+{\footnotesize\ttfamily std\+::string logger\+::gettime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Получение текущего времени 
+
+Позволяет получить время вместе с датой \mbox{\Hypertarget{classlogger_a44af18ffbd2a795d29f7c3996cf36201}\label{classlogger_a44af18ffbd2a795d29f7c3996cf36201}} 
+\index{logger@{logger}!set\_path@{set\_path}}
+\index{set\_path@{set\_path}!logger@{logger}}
+\doxysubsubsection{\texorpdfstring{set\_path()}{set\_path()}}
+{\footnotesize\ttfamily int logger\+::set\+\_\+path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Установка пути к файлу лога 
+
+Устанавливает путь к файлу лога
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em Путь} & к файлу лога \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classcrit__err}{crit\+\_\+err}}} & Если файл не открывается \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classlogger_adb4d3318a3dc17ef2cf4d2fca21e566c}\label{classlogger_adb4d3318a3dc17ef2cf4d2fca21e566c}} 
+\index{logger@{logger}!writelog@{writelog}}
+\index{writelog@{writelog}!logger@{logger}}
+\doxysubsubsection{\texorpdfstring{writelog()}{writelog()}}
+{\footnotesize\ttfamily int logger\+::writelog (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Запись события в журнал 
+
+Записывает событие в лог
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em Сообщение} & для записи \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classcrit__err}{crit\+\_\+err}}} & Если файл не открывается на запись \\
+\hline
+\end{DoxyExceptions}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{log_8h}{log.\+h}}\item 
+log.\+cpp\end{DoxyCompactItemize}

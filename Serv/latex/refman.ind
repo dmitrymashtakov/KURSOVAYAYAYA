@@ -1,0 +1,78 @@
+\begin{theindex}
+
+  \item {base}, \hyperpage{7}
+    \subitem {connect}, \hyperpage{7}
+  \item {base.h}, \hyperpage{17}
+
+  \indexspace
+
+  \item {calc}, \hyperpage{8}
+    \subitem {calc}, \hyperpage{8}
+  \item {calc.h}, \hyperpage{18}
+  \item {communicator}, \hyperpage{9}
+    \subitem {connection}, \hyperpage{9}
+    \subitem {generate\_salt}, \hyperpage{10}
+    \subitem {sha224}, \hyperpage{10}
+  \item {communicator.h}, \hyperpage{19}
+  \item {connect}
+    \subitem {base}, \hyperpage{7}
+  \item {connection}
+    \subitem {communicator}, \hyperpage{9}
+  \item {crit\_err}, \hyperpage{11}
+
+  \indexspace
+
+  \item {error.h}, \hyperpage{21}
+
+  \indexspace
+
+  \item {generate\_salt}
+    \subitem {communicator}, \hyperpage{10}
+  \item {get\_port}
+    \subitem {interface}, \hyperpage{12}
+  \item {gettime}
+    \subitem {logger}, \hyperpage{14}
+
+  \indexspace
+
+  \item {interface}, \hyperpage{12}
+    \subitem {get\_port}, \hyperpage{12}
+    \subitem {parser}, \hyperpage{12}
+    \subitem {setup\_connection}, \hyperpage{13}
+    \subitem {spravka}, \hyperpage{13}
+  \item {interface.h}, \hyperpage{22}
+
+  \indexspace
+
+  \item {log.h}, \hyperpage{23}
+  \item {logger}, \hyperpage{13}
+    \subitem {gettime}, \hyperpage{14}
+    \subitem {set\_path}, \hyperpage{14}
+    \subitem {writelog}, \hyperpage{15}
+
+  \indexspace
+
+  \item {no\_crit\_err}, \hyperpage{15}
+
+  \indexspace
+
+  \item {parser}
+    \subitem {interface}, \hyperpage{12}
+
+  \indexspace
+
+  \item {set\_path}
+    \subitem {logger}, \hyperpage{14}
+  \item {setup\_connection}
+    \subitem {interface}, \hyperpage{13}
+  \item {sha224}
+    \subitem {communicator}, \hyperpage{10}
+  \item {spravka}
+    \subitem {interface}, \hyperpage{13}
+
+  \indexspace
+
+  \item {writelog}
+    \subitem {logger}, \hyperpage{15}
+
+\end{theindex}

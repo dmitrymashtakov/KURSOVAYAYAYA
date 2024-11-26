@@ -1,0 +1,11 @@
+<map id="communicator.h" name="communicator.h">
+<area shape="rect" id="node1" title="Заголовочный файл для коммуникатора сервера" alt="" coords="71,5,201,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="97,155,157,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="23,80,87,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="111,80,161,107"/>
+<area shape="rect" id="node5" href="$log_8h.html" title="Заголовочный файл для установки журнала лога" alt="" coords="186,80,241,107"/>
+<area shape="rect" id="node6" href="$error_8h.html" title="Заголовочный файл модуля возбуждения ошибок" alt="" coords="265,80,335,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="181,155,293,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="318,155,405,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="429,155,494,181"/>
+</map>

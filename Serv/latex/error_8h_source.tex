@@ -1,0 +1,21 @@
+\hypertarget{error_8h_source}{}\doxysection{error.\+h}
+\mbox{\hyperlink{error_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <system\_error>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classcrit__err}{crit\_err}}:\textcolor{keyword}{public} std::runtime\_error}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16     \textcolor{keyword}{public}:}
+\DoxyCodeLine{17         \mbox{\hyperlink{classcrit__err}{crit\_err}}(\textcolor{keyword}{const} std::string\& s):std::runtime\_error(s)\{\}}
+\DoxyCodeLine{18         }
+\DoxyCodeLine{19 \};}
+\DoxyCodeLine{23 \textcolor{keyword}{class }\mbox{\hyperlink{classno__crit__err}{no\_crit\_err}}:\textcolor{keyword}{public} std::runtime\_error}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{25     \textcolor{keyword}{public}:}
+\DoxyCodeLine{26         \mbox{\hyperlink{classno__crit__err}{no\_crit\_err}}(\textcolor{keyword}{const} std::string s): std::runtime\_error(s)\{\}}
+\DoxyCodeLine{27 \};}
+
+\end{DoxyCode}

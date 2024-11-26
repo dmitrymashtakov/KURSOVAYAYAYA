@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Шифр табличной маршрутной перестановки: Исходный файл log.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Шифр табличной маршрутной перестановки<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">log.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="log_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classlogger.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="classlogger.html">logger</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    std::string <a class="code hl_function" href="classlogger.html#af04d09b3015e2aa00ef7771233a33bf0">gettime</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classlogger.html#ad81104a3584301fa1800d1e562bb6b58">   19</a></span>    std::string <a class="code hl_variable" href="classlogger.html#ad81104a3584301fa1800d1e562bb6b58">path_to_logfile</a>; </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_function" href="classlogger.html#a4f753a510e00c892b38e95c2284363a6">logger</a>(); </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_function" href="classlogger.html#a4f753a510e00c892b38e95c2284363a6">logger</a>(<span class="keyword">const</span> std::string&amp; path); </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classlogger.html#a44af18ffbd2a795d29f7c3996cf36201">set_path</a>(<span class="keyword">const</span> std::string&amp; path_file);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classlogger.html#adb4d3318a3dc17ef2cf4d2fca21e566c">writelog</a>(<span class="keyword">const</span> std::string&amp; message);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::string <a class="code hl_function" href="classlogger.html#afa92e606d629dde8b5b71aa0c9afedf5">get_path</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
+<div class="ttc" id="aclasslogger_html"><div class="ttname"><a href="classlogger.html">logger</a></div><div class="ttdoc">Класс для журнала лога</div><div class="ttdef"><b>Definition:</b> log.h:10</div></div>
+<div class="ttc" id="aclasslogger_html_a44af18ffbd2a795d29f7c3996cf36201"><div class="ttname"><a href="classlogger.html#a44af18ffbd2a795d29f7c3996cf36201">logger::set_path</a></div><div class="ttdeci">int set_path(const std::string &amp;path_file)</div><div class="ttdoc">Установка пути к файлу лога</div><div class="ttdef"><b>Definition:</b> log.cpp:15</div></div>
+<div class="ttc" id="aclasslogger_html_a4f753a510e00c892b38e95c2284363a6"><div class="ttname"><a href="classlogger.html#a4f753a510e00c892b38e95c2284363a6">logger::logger</a></div><div class="ttdeci">logger()</div><div class="ttdoc">конструктор по умолчанию</div><div class="ttdef"><b>Definition:</b> log.cpp:9</div></div>
+<div class="ttc" id="aclasslogger_html_ad81104a3584301fa1800d1e562bb6b58"><div class="ttname"><a href="classlogger.html#ad81104a3584301fa1800d1e562bb6b58">logger::path_to_logfile</a></div><div class="ttdeci">std::string path_to_logfile</div><div class="ttdoc">Путьк файлу лога</div><div class="ttdef"><b>Definition:</b> log.h:19</div></div>
+<div class="ttc" id="aclasslogger_html_adb4d3318a3dc17ef2cf4d2fca21e566c"><div class="ttname"><a href="classlogger.html#adb4d3318a3dc17ef2cf4d2fca21e566c">logger::writelog</a></div><div class="ttdeci">int writelog(const std::string &amp;message)</div><div class="ttdoc">Запись события в журнал</div><div class="ttdef"><b>Definition:</b> log.cpp:28</div></div>
+<div class="ttc" id="aclasslogger_html_af04d09b3015e2aa00ef7771233a33bf0"><div class="ttname"><a href="classlogger.html#af04d09b3015e2aa00ef7771233a33bf0">logger::gettime</a></div><div class="ttdeci">std::string gettime()</div><div class="ttdoc">Получение текущего времени</div><div class="ttdef"><b>Definition:</b> log.cpp:43</div></div>
+<div class="ttc" id="aclasslogger_html_afa92e606d629dde8b5b71aa0c9afedf5"><div class="ttname"><a href="classlogger.html#afa92e606d629dde8b5b71aa0c9afedf5">logger::get_path</a></div><div class="ttdeci">std::string get_path() const</div><div class="ttdoc">Получение пути к файлу лога (для модульного тестирования)</div><div class="ttdef"><b>Definition:</b> log.cpp:53</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

@@ -1,0 +1,23 @@
+\hypertarget{interface_8h_source}{}\doxysection{interface.\+h}
+\mbox{\hyperlink{interface_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <boost/program\_options.hpp>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{log_8h}{log.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{base_8h}{base.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{communicator_8h}{communicator.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{error_8h}{error.h}}"{}}}
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{classinterface}{interface}} \{}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} \mbox{\hyperlink{classinterface_a13cd710d0eef40b7deed70eebb5e3c3d}{port}}; }
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{classinterface}{interface}}() : \mbox{\hyperlink{classinterface_a13cd710d0eef40b7deed70eebb5e3c3d}{port}}(33333) \{\} \textcolor{comment}{//< конструктор по умолчанию}}
+\DoxyCodeLine{34 \textcolor{comment}{}    \textcolor{keywordtype}{bool} \mbox{\hyperlink{classinterface_a34f7f8b2941f6e5b769d45912ea4712c}{parser}}(\textcolor{keywordtype}{int} argc, \textcolor{keyword}{const} \textcolor{keywordtype}{char}** argv);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{classinterface_ade465f47f063d47549d9de850892479c}{setup\_connection}}(\textcolor{keyword}{const} std::string\& basefile, \textcolor{keyword}{const} std::string\& logfile);}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{classinterface_a78702e23703d9f574adbe71ea93329af}{spravka}}(\textcolor{keyword}{const} boost::program\_options::options\_description\& opts);}
+\DoxyCodeLine{55     \textcolor{keywordtype}{int} \mbox{\hyperlink{classinterface_ae8e61af0495fdb37d7bb9b2484052175}{get\_port}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classinterface_a13cd710d0eef40b7deed70eebb5e3c3d}{port}}; \}}
+\DoxyCodeLine{56 \};}
+
+\end{DoxyCode}

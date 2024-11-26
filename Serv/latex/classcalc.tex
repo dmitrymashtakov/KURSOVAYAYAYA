@@ -1,0 +1,59 @@
+\hypertarget{classcalc}{}\doxysection{Класс calc}
+\label{classcalc}\index{calc@{calc}}
+
+
+Класс для операции среднего арифметического элементов вектора  
+
+
+
+
+{\ttfamily \#include $<$calc.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcalc_ada0b815601dd41ee86b58659e32eb0be}{calc}} (std\+::vector$<$ float $>$chisla)
+\begin{DoxyCompactList}\small\item\em Вычисление \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcalc_ac7e5686bbac4edfe26df52cdfd3ad86d}\label{classcalc_ac7e5686bbac4edfe26df52cdfd3ad86d}} 
+float {\bfseries send\+\_\+res} ()
+\begin{DoxyCompactList}\small\item\em Метод для отправки результата \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcalc_a90d18754b5bac0ce92adb5493518a653}\label{classcalc_a90d18754b5bac0ce92adb5493518a653}} 
+float {\bfseries res}
+\begin{DoxyCompactList}\small\item\em Переменная,в которую будет записан результат \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для операции среднего арифметического элементов вектора 
+
+Вектор указывается в параметрах конструктора. Для получения результат вычислений используется метод send\+\_\+res. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classcalc_ada0b815601dd41ee86b58659e32eb0be}\label{classcalc_ada0b815601dd41ee86b58659e32eb0be}} 
+\index{calc@{calc}!calc@{calc}}
+\index{calc@{calc}!calc@{calc}}
+\doxysubsubsection{\texorpdfstring{calc()}{calc()}}
+{\footnotesize\ttfamily calc\+::calc (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$}]{chisla }\end{DoxyParamCaption})}
+
+
+
+Вычисление 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em chisla} & Вектор данных. Не должен быть пустой. Тип данных float \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classno__crit__err}{no\+\_\+crit\+\_\+err}},если} & вектор пуст. \\
+\hline
+\end{DoxyExceptions}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{calc_8h}{calc.\+h}}\item 
+calc.\+cpp\end{DoxyCompactItemize}

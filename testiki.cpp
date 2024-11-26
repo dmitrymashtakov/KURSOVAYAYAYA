@@ -6,18 +6,18 @@
 #include <limits>
 #include <thread>
 #include <sstream>
-#include "log.h"
-#include "communicator.h"
-#include "calc.h"
-#include "base.h"
-#include "interface.h"
-#include "error.h"
+#include "Serv/log.h"
+#include "Serv/communicator.h"
+#include "Serv/calc.h"
+#include "Serv/base.h"
+#include "Serv/interface.h"
+#include "Serv/error.h"
 
-#include "log.cpp"
-#include "calc.cpp"
-#include "base.cpp"
-#include "communicator.cpp"
-#include "interface.cpp"
+#include "Serv/log.cpp"
+#include "Serv/calc.cpp"
+#include "Serv/base.cpp"
+#include "Serv/communicator.cpp"
+#include "Serv/interface.cpp"
 namespace po = boost::program_options;
 SUITE(InterfaceTests) {
 
@@ -134,7 +134,7 @@ SUITE(base_file){
 	TEST(no_tochka_in_base_path)
 	{ 
 		base Con;
-		std::string path = "test_files/basetxt\n";
+		std::string path = "Serv/test_files/basetxt";
 		CHECK_THROW(Con.connect(path),crit_err);
 	}
 	TEST(empty_path){
@@ -161,20 +161,20 @@ SUITE(base_file){
 	}
 	TEST(Empty_Base){
 		base Con;
-		std::string path = "test_files/base_empty.txt";
+		std::string path = "Serv/test_files/base_empty.txt";
 		CHECK_THROW(Con.connect(path),crit_err);
 	}
 	TEST(no_user_in_base){
 		base Con;
 		std::string check_login = "ZZZZZ";
-		std::string path = "test_files/base.txt";
+		std::string path = "Serv/test_files/base.txt";
 		Con.connect(path);
 		CHECK_THROW(Con.get_data().at(check_login), std::out_of_range);
 	}
 	TEST(login_only) {
     	base Con;
     	std::string check_login = "login";
-    	std::string path = "test_files/base.txt";
+    	std::string path = "Serv/test_files/base.txt";
     	Con.connect(path);
     	if(Con.get_data().find(check_login) != Con.get_data().end()) {
         	CHECK(true);
@@ -185,7 +185,7 @@ SUITE(base_file){
 TEST(pass_only) {
     base Con;
     std::string check_pass = "pswd";
-    std::string path = "test_files/base.txt";
+    std::string path = "Serv/test_files/base.txt";
     Con.connect(path);
     
     if(Con.get_data().find(check_pass) != Con.get_data().end()) {
@@ -196,7 +196,7 @@ TEST(pass_only) {
 }
 TEST(invalid_base){
 		base Con;
-		std::string path = "test_files/invalid_base.txt";
+		std::string path = "Serv/test_files/invalid_base.txt";
 		CHECK_THROW(Con.connect(path), crit_err);
 	}
 }
@@ -209,12 +209,12 @@ SUITE(Log_file){
 	}
 	TEST(correct_path){
 		logger l;
-		std::string path = "test_files/log.txt";
+		std::string path = "Serv/test_files/log.txt";
 		CHECK_EQUAL(0,l.set_path(path));
 	}
 	TEST(no_tochka_in_log){
 		logger l;
-		std::string path = "test_files/loglog\n";
+		std::string path = "Serv/test_files/loglog\n";
 		CHECK_THROW(l.set_path(path),crit_err);
 	}
 	TEST(empty_path_log){
@@ -224,7 +224,7 @@ SUITE(Log_file){
 	}
 	TEST(write_in_log) { 
 	logger log;
-    log.set_path("test_files/log.txt");
+    log.set_path("Serv/test_files/log.txt");
 	log.writelog("Некритическая ошибка");
     ifstream infile("test_files/log.txt");
     string line;

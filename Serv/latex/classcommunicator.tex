@@ -1,0 +1,90 @@
+\hypertarget{classcommunicator}{}\doxysection{Класс communicator}
+\label{classcommunicator}\index{communicator@{communicator}}
+
+
+Класс коммуникатора  
+
+
+
+
+{\ttfamily \#include $<$communicator.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classcommunicator_a29497060a34bdc3184d15f8e0abf8e1c}{connection}} (int port, std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classbase}{base}}, \mbox{\hyperlink{classlogger}{logger}} $\ast$l)
+\begin{DoxyCompactList}\small\item\em Соединение с сервером \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classcommunicator_a769929ce2e5da9b55ada006b2a639e36}{sha224}} (std\+::string input\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Формирование хэша методом SHA224. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classcommunicator_a950f5f54251a72d76db51f36b33a86db}{generate\+\_\+salt}} ()
+\begin{DoxyCompactList}\small\item\em Формирование соли \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс коммуникатора 
+
+Устанавливает соединение с сервером, производит авторизацию клиента В качестве метода хэширования выбран sha224. 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classcommunicator_a29497060a34bdc3184d15f8e0abf8e1c}\label{classcommunicator_a29497060a34bdc3184d15f8e0abf8e1c}} 
+\index{communicator@{communicator}!connection@{connection}}
+\index{connection@{connection}!communicator@{communicator}}
+\doxysubsubsection{\texorpdfstring{connection()}{connection()}}
+{\footnotesize\ttfamily int communicator\+::connection (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{base,  }\item[{\mbox{\hyperlink{classlogger}{logger}} $\ast$}]{l }\end{DoxyParamCaption})}
+
+
+
+Соединение с сервером 
+
+Производит соединение с сервером, авторизует пользователя Передает вектор с данными для вычисления в класс calc. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em Номер} & порта, контейнер с базой данных, переменная типа logger для записи всех событий в журнал событий \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classcrit__err}{crit\+\_\+err}},если} & произошел сбой на этапе соединения с сервером, на этапе авторизации или отправки данных \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classcommunicator_a950f5f54251a72d76db51f36b33a86db}\label{classcommunicator_a950f5f54251a72d76db51f36b33a86db}} 
+\index{communicator@{communicator}!generate\_salt@{generate\_salt}}
+\index{generate\_salt@{generate\_salt}!communicator@{communicator}}
+\doxysubsubsection{\texorpdfstring{generate\_salt()}{generate\_salt()}}
+{\footnotesize\ttfamily std\+::string communicator\+::generate\+\_\+salt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Формирование соли 
+
+Производит формирование соли ПОсновано на библиотеке boost 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em input\+\_\+str} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+сформированная соль 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcommunicator_a769929ce2e5da9b55ada006b2a639e36}\label{classcommunicator_a769929ce2e5da9b55ada006b2a639e36}} 
+\index{communicator@{communicator}!sha224@{sha224}}
+\index{sha224@{sha224}!communicator@{communicator}}
+\doxysubsubsection{\texorpdfstring{sha224()}{sha224()}}
+{\footnotesize\ttfamily std\+::string communicator\+::sha224 (\begin{DoxyParamCaption}\item[{std\+::string}]{input\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Формирование хэша методом SHA224. 
+
+Производит формирование хэша методом sha224 библиотеки cryptopp Формирует хэш соли и пароля 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em input\+\_\+str} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+результат хэширования 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{communicator_8h}{communicator.\+h}}\item 
+communicator.\+cpp\end{DoxyCompactItemize}
