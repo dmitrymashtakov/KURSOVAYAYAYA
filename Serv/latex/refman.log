@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.29)  15 DEC 2024 20:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.10.29)  17 DEC 2024 18:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1334,16 +1334,16 @@ Underfull \hbox (badness 10000) detected at line 41
 <interface_8h__incl.pdf, id=701, 750.805pt x 269.005pt>
 File: interface_8h__incl.pdf Graphic file (type pdf)
 <use interface_8h__incl.pdf>
-Package pdftex.def Info: interface_8h__incl.pdf  used on input line 21.
+Package pdftex.def Info: interface_8h__incl.pdf  used on input line 20.
 (pdftex.def)             Requested size: 350.0pt x 125.40208pt.
 
 [22]
-Underfull \hbox (badness 10000) detected at line 34
+Underfull \hbox (badness 10000) detected at line 33
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 37
+Underfull \hbox (badness 10000) detected at line 36
 [][][]
  []
 
@@ -1406,9 +1406,9 @@ s/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on refman.pdf (29 pages, 287705 bytes).
+Output written on refman.pdf (29 pages, 285219 bytes).
 PDF statistics:
- 1191 PDF objects out of 1200 (max. 8388607)
+ 1183 PDF objects out of 1200 (max. 8388607)
  801 compressed objects within 9 object streams
  179 named destinations out of 1000 (max. 500000)
  535 words of extra memory for PDF output out of 10000 (max. 10000000)
