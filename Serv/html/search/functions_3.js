@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parser_0',['parser',['../classinterface.html#a34f7f8b2941f6e5b769d45912ea4712c',1,'interface']]]
+  ['logger_0',['logger',['../classlogger.html#a4f753a510e00c892b38e95c2284363a6',1,'logger::logger()'],['../classlogger.html#a3ba55d67c48e54c1b189856bcf3451a3',1,'logger::logger(const std::string &amp;path)']]]
 ];

@@ -5,19 +5,24 @@
 \DoxyCodeLine{2 \textcolor{preprocessor}{\#include <boost/program\_options.hpp>}}
 \DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
 \DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
-\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{log_8h}{log.h}}"{}}}
-\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{base_8h}{base.h}}"{}}}
-\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{communicator_8h}{communicator.h}}"{}}}
-\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{error_8h}{error.h}}"{}}}
-\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{classinterface}{interface}} \{}
-\DoxyCodeLine{21     \textcolor{keywordtype}{int} \mbox{\hyperlink{classinterface_a13cd710d0eef40b7deed70eebb5e3c3d}{port}}; }
-\DoxyCodeLine{22 }
-\DoxyCodeLine{23 \textcolor{keyword}{public}:}
-\DoxyCodeLine{24     \mbox{\hyperlink{classinterface}{interface}}() : \mbox{\hyperlink{classinterface_a13cd710d0eef40b7deed70eebb5e3c3d}{port}}(33333) \{\} \textcolor{comment}{//< конструктор по умолчанию}}
-\DoxyCodeLine{34 \textcolor{comment}{}    \textcolor{keywordtype}{bool} \mbox{\hyperlink{classinterface_a34f7f8b2941f6e5b769d45912ea4712c}{parser}}(\textcolor{keywordtype}{int} argc, \textcolor{keyword}{const} \textcolor{keywordtype}{char}** argv);}
-\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{classinterface_ade465f47f063d47549d9de850892479c}{setup\_connection}}(\textcolor{keyword}{const} std::string\& basefile, \textcolor{keyword}{const} std::string\& logfile);}
-\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{classinterface_a78702e23703d9f574adbe71ea93329af}{spravka}}(\textcolor{keyword}{const} boost::program\_options::options\_description\& opts);}
-\DoxyCodeLine{55     \textcolor{keywordtype}{int} \mbox{\hyperlink{classinterface_ae8e61af0495fdb37d7bb9b2484052175}{get\_port}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classinterface_a13cd710d0eef40b7deed70eebb5e3c3d}{port}}; \}}
-\DoxyCodeLine{56 \};}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{log_8h}{log.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{base_8h}{base.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{communicator_8h}{communicator.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{error_8h}{error.h}}"{}}}
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{classinterface}{interface}} \{}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} \mbox{\hyperlink{classinterface_a13cd710d0eef40b7deed70eebb5e3c3d}{port}}; }
+\DoxyCodeLine{23     \textcolor{keywordtype}{string} \mbox{\hyperlink{classinterface_a7ca5a0c11d4a52cd5bcb18445eafc3fb}{basefile}}; }
+\DoxyCodeLine{24     \textcolor{keywordtype}{string} \mbox{\hyperlink{classinterface_a03986e4b403c49e3dee94068db1d97d6}{logfile}}; }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     \mbox{\hyperlink{classinterface_a13e0ee4b9df1714d747d62ec46220c55}{interface}}() : \mbox{\hyperlink{classinterface_a13cd710d0eef40b7deed70eebb5e3c3d}{port}}(33333) \{\} }
+\DoxyCodeLine{37     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classinterface_a34f7f8b2941f6e5b769d45912ea4712c}{parser}}(\textcolor{keywordtype}{int} argc, \textcolor{keyword}{const} \textcolor{keywordtype}{char}** argv);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{classinterface_ade465f47f063d47549d9de850892479c}{setup\_connection}}(\textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classinterface_a7ca5a0c11d4a52cd5bcb18445eafc3fb}{basefile}}, \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classinterface_a03986e4b403c49e3dee94068db1d97d6}{logfile}});}
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{classinterface_a78702e23703d9f574adbe71ea93329af}{spravka}}(\textcolor{keyword}{const} boost::program\_options::options\_description\& opts);}
+\DoxyCodeLine{58     \textcolor{keywordtype}{int} \mbox{\hyperlink{classinterface_ae8e61af0495fdb37d7bb9b2484052175}{get\_port}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classinterface_a13cd710d0eef40b7deed70eebb5e3c3d}{port}}; \}}
+\DoxyCodeLine{59     std::string get\_base() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classinterface_a7ca5a0c11d4a52cd5bcb18445eafc3fb}{basefile}};\}}
+\DoxyCodeLine{60     std::string get\_log() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classinterface_a03986e4b403c49e3dee94068db1d97d6}{logfile}};\}}
+\DoxyCodeLine{61 \};}
 
 \end{DoxyCode}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['data_5fbase_0',['data_base',['../classbase.html#a6dbe20039129ba301ca0c0dc8e14ee39',1,'base']]]
+  ['basefile_0',['basefile',['../classinterface.html#a7ca5a0c11d4a52cd5bcb18445eafc3fb',1,'interface']]]
 ];

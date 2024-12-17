@@ -6,11 +6,8 @@
 using namespace std;
 void base::connect(string f)
 {
-	interface z;
-	f = z.get_base();
 	if(f.find('.')==std::string::npos){
 		throw crit_err("НЕКОРРЕКТНЫЙ ФАЙЛ БД. КРИТИЧЕСКАЯ ОШИБКА");
-		exit(1);
 	}
     ifstream rfile;
     rfile.open(f);
@@ -20,14 +17,17 @@ void base::connect(string f)
   			size_t i = line.find(':');
   			if (i == std::string::npos) {
                 throw crit_err("Формат строки неверен; требуется 'login:password'");
+                exit(0);
             }
   			std::string login = line.substr(0, i);
   			std::string pass = line.substr(i + 1);
   			if (login.empty() && !pass.empty()) {
                 throw crit_err("Присутствует только пароль без логина");
+                exit(0);
             }
             if (!login.empty() && pass.empty()) {
                 throw crit_err("Присутствует только логин без пароля");
+                exit(0);
             }
             data_base[login]= pass;
         }

@@ -1,4 +1,8 @@
 #include "interface.h"
+#include "base.h"
+#include "log.h"
+#include <iostream>
+#include <fstream>
 
 namespace po = boost::program_options;
 
@@ -20,25 +24,24 @@ bool interface::parser(int argc, const char** argv) {
 
     if (vm.count("help")) {
         spravka(opts);
-        return 0; 
+        return false; 
     }
-	
+
     basefile = vm["basefile"].as<std::string>();
     logfile = vm["logfile"].as<std::string>();
+
     std::ifstream db_file(basefile);
     std::ifstream lg_file(logfile);
-    if (basefile.find('.') == std::string::npos or !db_file.good()) {
+
+    if (basefile.find('.') == std::string::npos || !db_file.good()) {
         throw crit_err("НЕКОРРЕКТНЫЙ ФАЙЛ БАЗЫ ДАННЫХ. КРИТИЧЕСКАЯ ОШИБКА");
-        return 0;
     }
-    if (logfile.find('.') == std::string::npos or !lg_file.good()) {
+    if (logfile.find('.') == std::string::npos || !lg_file.good()) {
         throw crit_err("НЕКОРРЕКТНЫЙ ФАЙЛ ЛОГА. КРИТИЧЕСКАЯ ОШИБКА");
-        return 0;
     }
-    
+
     if (port < 1024 || port > 65535) {
         throw crit_err("НЕКОРРЕКТНЫЙ ПОРТ. КРИТИЧЕСКАЯ ОШИБКА");
-        return 0;
     }
 
     // Логирование информации о файлах
@@ -47,7 +50,7 @@ bool interface::parser(int argc, const char** argv) {
     l.writelog("Путь к файлу БД: " + basefile);
     l.writelog("Используемый порт: " + std::to_string(port));
 
-    return 1; // Успешно обработаны параметры
+    return true; // Успешно обработаны параметры
 }
 
 void interface::setup_connection(const std::string& basefile, const std::string& logfile) {
@@ -60,8 +63,11 @@ void interface::setup_connection(const std::string& basefile, const std::string&
         l.writelog("Сервер запущен");
     } catch (const std::exception& e) {
         l.writelog("Ошибка соединения с БД: " + std::string(e.what()));
+        std::cerr << "Ошибка соединения с БД: " << e.what() << std::endl;
+        return; // Прерываем выполнение, если база данных недоступна
     }
+
     communicator z;
-    std::cout << "Сервер запущен на порте "<< port << " -h - вызов справки"<<std::endl;
+    std::cout << "Сервер запущен на порте " << port << " -h - вызов справки" << std::endl;
     z.connection(port, h.get_data(), &l);
 }

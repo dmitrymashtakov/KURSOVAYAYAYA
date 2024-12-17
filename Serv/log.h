@@ -16,7 +16,7 @@ private:
      *
      */
     std::string gettime();
-    std::string path_to_logfile; ///< Путьк файлу лога
+    std::string path_to_logfile; ///< Путь к файлу лога
 
 public:
     logger(); ///< конструктор по умолчанию

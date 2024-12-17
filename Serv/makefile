@@ -1,25 +1,30 @@
-.PHONY: all clean format
+.PHONY: all clean format doxy test
 
-CXX=g++
-CXXFLAGS=-O2 -Wall -DNDEBUG -std=c++17
-LDFLAGS= -lcryptopp -lboost_program_options
-PROJECT = Server
-SOURCES := $(wildcard *.cpp)
-HEADERS := $(wildcard *.h)
-OBJECTS := $(SOURCES:%.cpp=%.o)
+CXX = g++
+CXXFLAGS = -O2 -Wall -DNDEBUG -std=c++17
+LDFLAGS = -lcryptopp -lboost_program_options -lUnitTest++ -pthread
 
-all : $(PROJECT)
+TARGET = Server
+SOURCES = communicator.cpp calc.cpp interface.cpp base.cpp log.cpp main.cpp
+OBJECTS = $(SOURCES:.cpp=.o)
 
-$(PROJECT) : $(OBJECTS)
-	$(CXX) $^ $(LDFLAGS) -o $@
-	rm -f *.o *.orig
+TEST_SOURCES = communicator.cpp calc.cpp interface.cpp base.cpp log.cpp testiki.cpp
+TEST_OBJECTS = $(TEST_SOURCES:.cpp=.o)
+TEST_TARGET = test
 
-%.o : %.cpp
-	$(CXX) -c $(CXXFLAGS) $< -o $@
+all: $(TARGET)
 
-$(OBJECTS) : $(HEADERS)
+$(TARGET): $(OBJECTS)
+	$(CXX) $(OBJECTS) $(LDFLAGS) -o $(TARGET)
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+test: $(TEST_OBJECTS)
+	$(CXX) $(TEST_OBJECTS) $(LDFLAGS) -o $(TEST_TARGET)
 
 format:
 	astyle *.cpp *.h
+
 clean:
-	rm -f $(PROJECT) *.o *.orig
+	rm -f $(TARGET) $(TEST_TARGET) *.o

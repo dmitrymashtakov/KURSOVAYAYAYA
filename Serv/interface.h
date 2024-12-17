@@ -20,11 +20,11 @@
  */
 class interface {
     int port; ///< Переменная с номером порта
-    string basefile;
-    string logfile;
+    string basefile; ///< путь к файлу базы данных
+    string logfile; ///< путь к файлу журнала
 
 public:
-    interface() : port(33333), basefile("base.txt"), logfile("log.txt") {} //< конструктор по умолчанию
+    interface() : port(33333) {} ///< конструктор по умолчанию
     /**
      * @brief Парсер
      * 
